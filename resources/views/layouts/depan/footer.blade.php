@@ -67,7 +67,7 @@
                 <div class="col-lg-5 col-md-12">
                     <div class="footer-widget right-border mb-30">
                         <div class="footer-logo mb-15">
-                            <a href="index.html"><img src="{{ asset('Goetze/') }}/assets/img/logo_footer.png"
+                            <a href="index.html"><img src="{{ asset('goetze/') }}/assets/img/logo_footer.png"
                                     alt=""></a>
                         </div>
                         <p class="no-margin footer-dec">Nam liber tempor cum soluta nobis eleifend option congue
@@ -126,7 +126,7 @@
                             </li>
                         </ul>
                         <div class="payment-way">
-                            <a href="#"><img src="{{ asset('Goetze/') }}/assets/img/paypal.png"
+                            <a href="#"><img src="{{ asset('goetze/') }}/assets/img/paypal.png"
                                     alt=""></a>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="copyright-text">
-                        <span>Copyright <a href="#">Goetze</a> All rights reserved.</span>
+                        <span>Copyright <a href="#">goetze</a> All rights reserved.</span>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-md-3 col-6">
                     <div class="site-logo">
-                        <a href="index.html"><img src="{{ asset('Goetze/') }}/assets/img/site-logo.png" alt=""></a>
+                        <a href="index.html"><img src="{{ asset('images/') }}/beanbag-wonosobo162.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-6 d-block d-md-none static">
@@ -52,7 +52,7 @@
                                     <div class="col-md-6">
                                         <div class="mega-menu-banner">
                                             <a href="#"><img
-                                                    src="{{ asset('Goetze/') }}/assets/img/mega-menu/shop-banner.jpg"
+                                                    src="{{ asset('goetze/') }}/assets/img/mega-menu/shop-banner.jpg"
                                                     alt=""></a>
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@
                                     <div class="col-md-3">
                                         <div class="mega-menu-banner">
                                             <a href="#"><img
-                                                    src="{{ asset('Goetze/') }}/assets/img/mega-menu/page-banner.jpg"
+                                                    src="{{ asset('goetze/') }}/assets/img/mega-menu/page-banner.jpg"
                                                     alt=""></a>
                                         </div>
                                     </div>
@@ -127,7 +127,7 @@
                                             <div class="single-cart-product mb-20">
                                                 <div class="mini-cart-img">
                                                     <a class="img" href="shop-details.html"><img
-                                                            src="{{ asset('Goetze/') }}/assets/img/mini-cart/1.jpg"
+                                                            src="{{ asset('goetze/') }}/assets/img/mini-cart/1.jpg"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="mini-cart-text">
@@ -141,7 +141,7 @@
                                             <div class="single-cart-product mb-20">
                                                 <div class="mini-cart-img">
                                                     <a class="img" href="shop-details.html"><img
-                                                            src="{{ asset('Goetze/') }}/assets/img/mini-cart/2.jpg"
+                                                            src="{{ asset('goetze/') }}/assets/img/mini-cart/2.jpg"
                                                             alt=""></a>
                                                 </div>
                                                 <div class="mini-cart-text">
