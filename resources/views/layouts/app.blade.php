@@ -1,45 +1,70 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    @include('layouts.head')
+</head>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+<body>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Main navbar !!-->
+    @include('layouts.navbar')
+    <!-- /main navbar !-->
 
-        <!-- Styles -->
-        @livewireStyles
-    </head>
-    <body class="font-sans antialiased">
-        <x-banner />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+    <!-- Page content !-->
+    <div class="page-content">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+        <!-- Main sidebar !-->
+        <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+            <!-- Sidebar mobile toggler !-->
+            <div class="sidebar-mobile-toggler text-center">
+                <a href="#" class="sidebar-mobile-main-toggle">
+                    <i class="icon-arrow-left8"></i>
+                </a>
+                Navigation
+                <a href="#" class="sidebar-mobile-expand">
+                    <i class="icon-screen-full"></i>
+                    <i class="icon-screen-normal"></i>
+                </a>
+            </div>
+            <!-- /sidebar mobile toggler !-->
+
+
+            <!-- Sidebar content !-->
+            @include('layouts.sidebar')
+            <!-- /sidebar content !-->
+
         </div>
+        <!-- /main sidebar !-->
 
-        @stack('modals')
 
-        @livewireScripts
-    </body>
+        <!-- Main content !-->
+        <div class="content-wrapper">
+
+            <!-- Page header !-->
+            {{ $header ?? '' }}
+            <!-- /page header !-->
+
+
+            <!-- Content area !-->
+            <div class="content">
+                {{ $slot ?? '' }}
+            </div>
+            <!-- /content area !-->
+
+
+            <!-- Footer !-->
+            @include('layouts.footer')
+            <!-- /footer !-->
+
+        </div>
+        <!-- /main content !-->
+
+    </div>
+    <!-- /page content !-->
+
+</body>
+
 </html>

@@ -25,7 +25,7 @@
                         </li>
                         <li><a href="my-account.html"><i class="fas fa-user"></i>My Account</a></li>
                         <li><a href="wishlist.html"><i class="fas fa-heart"></i>My Wishlist</a></li>
-                        <li><a href="login_register.html"><i class="fas fa-unlock"></i>Sign In</a></li>
+                        <li><a href="{{ route('login') }}"><i class="fas fa-unlock"></i>Sign In</a></li>
                         <li><a href="checkout.html"><i class="fas fa-share-square"></i>Check Out</a></li>
                     </ul>
                 </div>

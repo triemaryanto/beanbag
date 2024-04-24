@@ -1,48 +1,161 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-        <x-validation-errors class="mb-4" />
+<head>
+    @include('layouts.depan.head')
+</head>
 
-        @session('status')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ $value }}
+<body>
+    <!-- Start Header Area -->
+    @include('layouts.depan.header')
+    <!-- End Header Area -->
+    <main>
+        <!-- Start Breadcrumb Area -->
+        <section class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb-wrapper">
+                            <nav>
+                                <ul class="breadcrumb">
+                                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                                    <li class="active">Login &amp; Register</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
-        @endsession
+        </section>
+        <!-- End Breadcrumb Area -->
+        <!-- Start Cart Area -->
+        <section class="login_register-area pb-30 pt-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="block-title mb-30">
+                            <h5>Create an account</h5>
+                        </div>
+                        <div class="register-form mb-30">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-element">
+                                            <label for="name">Your Name <span class="required">*</span></label>
+                                            <input id="name" type="text" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-element">
+                                            <label for="email">Your Email <span class="required">*</span></label>
+                                            <input id="email" type="email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-element">
+                                            <label for="pass">Password</label>
+                                            <input id="pass" type="password">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-element">
+                                            <label for="pass2">Retype Password</label>
+                                            <input id="pass2" type="password" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-element">
+                                            <input type="submit" value="Sign Up" class="btn">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="block-title mb-30">
+                            <h5>Already registered?</h5>
+                            <x-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+                        </div>
+                        <div class="login-form mb-30">
+                            <form method="POST" {{ route('login') }}>
+                                @csrf
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-element">
+                                            <label for="email">Email Address <span class="required">*</span></label>
+                                            <input id="email" type="email" name="email" :value="old('email')"
+                                                required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-element">
+                                            <label for="password">Password</label>
+                                            <input id="password" type="password" name="password" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-element mb-20">
+                                            <input type="submit" value="Sign in" class="btn">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#">Forgot your password?</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+        <!-- End Cart Area -->
 
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+        <!-- Start Brand Area -->
+        <section class="brand-area gray-bg pt-30 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="brand-carousel owl-carousel">
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/1.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/2.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/3.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/4.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/5.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/6.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="single-brand-item">
+                                <a href="#"><img src="{{ asset('goetze/') }}/assets/img/brand/7.jpg"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+        <!-- End Brand Area -->
+    </main>
+    @include('layouts.depan.footer')
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+    @include('layouts.depan.script')
+</body>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+</html>
